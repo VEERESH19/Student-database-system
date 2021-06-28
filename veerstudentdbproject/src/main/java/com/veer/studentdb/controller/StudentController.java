@@ -66,7 +66,7 @@ public class StudentController {
 		return studentService.updateStudent(updstu);
 	}
 
-	@RequestMapping(value= "/Student/delete/{id}", method= RequestMethod.DELETE)
+	@RequestMapping(value= "/Student/delete/{sId}", method= RequestMethod.DELETE)
 	@PreAuthorize("hasRole('Admin')")
 	public void deleteStudentById(@PathVariable int sId) throws Exception {
 		System.out.println(this.getClass().getSimpleName() + " - Delete Student by id is invoked.");
