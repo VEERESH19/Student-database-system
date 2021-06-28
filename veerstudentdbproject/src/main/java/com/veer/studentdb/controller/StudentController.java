@@ -46,7 +46,7 @@ public class StudentController {
 		return studentService.addNewStudent(newstu);
 	}
 
-	@RequestMapping(value= "/Student/update/{id}", method= RequestMethod.PUT)
+	@RequestMapping(value= "/Student/update/{sId}", method= RequestMethod.PUT)
 	public Student updateStudent(@RequestBody Student updstu, @PathVariable int sId) throws Exception {
 		System.out.println(this.getClass().getSimpleName() + " - Update Student details by id is invoked.");
 
