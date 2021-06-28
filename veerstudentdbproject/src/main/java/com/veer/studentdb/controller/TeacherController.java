@@ -41,7 +41,7 @@ public class TeacherController {
 		return teacherService.addNewTeacher(newteach);
 	}
 
-	@RequestMapping(value = "/Teacher/update/{id}", method = RequestMethod.PUT)
+	@RequestMapping(value = "/Teacher/update/{tId}", method = RequestMethod.PUT)
 	public Teacher updateTeacher(@RequestBody Teacher updteach, @PathVariable int tId) throws Exception {
 		System.out.println(this.getClass().getSimpleName() + " - Update Teacher details by id is invoked.");
 
@@ -58,7 +58,7 @@ public class TeacherController {
 		return teacherService.updateTeacher(updteach);
 	}
 
-	@RequestMapping(value = "/Teacher/delete/{id}", method = RequestMethod.DELETE)
+	@RequestMapping(value = "/Teacher/delete/{tId}", method = RequestMethod.DELETE)
 	public void deleteTeacherById(@PathVariable int tId) throws Exception {
 		System.out.println(this.getClass().getSimpleName() + " - Delete Teacher by id is invoked.");
 
